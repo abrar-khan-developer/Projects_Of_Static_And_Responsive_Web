@@ -65,4 +65,6 @@ If you find this project helpful, feel free to **star the repository** ⭐
 Suggestions and improvements are always welcome.
 
 
+## 📸 Project Screenshot
 
+![Project Preview](./assets/img/preview.png)

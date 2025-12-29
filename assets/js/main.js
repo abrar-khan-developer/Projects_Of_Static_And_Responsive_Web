@@ -17,35 +17,6 @@ if(navClose){
     })
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
-
-const linkAction = () =>{
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-const scrollHeader = () =>{
-    const header = document.getElementById('header')
-    // Add a class if the bottom offset is greater than 50 of the viewport
-    this.scrollY >= 50 ? header.classList.add('scroll-header') 
-                       : header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
-
-/*=============== TESTIMONIAL SWIPER ===============*/
-let testimonialSwiper = new Swiper(".testimonial-swiper", {
-    spaceBetween: 30,
-    loop: 'true',
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
 
 /*=============== NEW SWIPER ===============*/
 let swiperFavorite = new Swiper(".favorite__swiper", {
@@ -97,6 +68,53 @@ const scrollUp = () =>{
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+// =================== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true /* Animation repeat */
+})
+sr.reveal(`.home__social, .favorite__container, sponsor__container, .footer`)
+sr.reveal(`.home__title span:nth-child(1)`, {origin: 'left', opacity: 1})
+sr.reveal(`.home__tooltip, .home__button, .model__button`, {origin: 'bottom'})
+sr.reveal(`.about__data`, {origin: 'left'})
+sr.reveal(`.about__img, .model__tooltip`, {origin: 'right'})
+
+
+
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll('.nav__link')
+
+const linkAction = () =>{
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeader = () =>{
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 of the viewport
+    this.scrollY >= 50 ? header.classList.add('scroll-header') 
+                       : header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*=============== TESTIMONIAL SWIPER ===============*/
+let testimonialSwiper = new Swiper(".testimonial-swiper", {
+    spaceBetween: 30,
+    loop: 'true',
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
 
 /*=============== SHOW CART ===============*/
 const cart = document.getElementById('cart'),
