@@ -109,7 +109,7 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden; 
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -145,7 +145,6 @@ img {
 @media screen and (max-width: 1150px){
   .nav__menu{
     position: fixed;
-    /* top: 0; */
     top: -100%;
     left: 0;
     background-color: hsla(23, 12%, 4%, .2);
@@ -580,9 +579,9 @@ button:hover{
 }
 
 /* For medium devices */
-@media screen and(min-width:576px){
+@media screen and (min-width:576px){
   .about__container{
-    grid-template-columns: 380px;
+    grid-template-columns: 380px  ;
     justify-content: center;
   }
   .footer__data{
@@ -590,7 +589,7 @@ button:hover{
     column-gap: 3rem;
   }
   .footer__group{
-    display: flex;
+    /* display: flex; */
     grid-column: initial;
   }
   .footer__social{
@@ -756,6 +755,7 @@ button:hover{
   }
   .footer__form{
     grid-template-columns: 1fr max-content;
+     /* grid-template-columns: repeat(3, 1fr); */
     background-color: var(--container-color);
     padding: .5rem;
     border-radius: 4rem;
