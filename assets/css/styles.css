@@ -304,7 +304,7 @@ img {
   font-weight: initial;
   color: var(--first-color);
 }
-button:hover{
+.button:hover{
   box-shadow: 0 12px  hsla(23, 100%,50%, .12);
 }
 
